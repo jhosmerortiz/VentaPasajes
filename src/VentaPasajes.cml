@@ -2,14 +2,15 @@ ContextMap VentaPasajesMap {
     contains GestionRutasContext
     contains GestionVentasContext
     contains GestionHorariosContext
-    contains GestionPasagesContext
+    contains GestionPasajesContext
  
 
     
     GestionRutasContext [U]->[D] GestionHorariosContext
-    GestionPasagesContext [U]->[D] GestionVentasContext
-    GestionHorariosContext [U]->[D] GestionVentasContext
-     GestionRutasContext [U]->[D] GestionVentasContext
+    GestionPasajesContext  [U]->[D] GestionRutasContext 
+    GestionPasajesContext  [U]->[D] GestionHorariosContext 
+    GestionVentasContext [U]->[D] GestionPasajesContext
+  
     
 }
 
@@ -17,7 +18,7 @@ ContextMap VentaPasajesMap {
 BoundedContext GestionHorariosContext {
 }
 
-BoundedContext GestionPasagesContext {
+BoundedContext GestionPasajesContext {
 }
 
 BoundedContext GestionVentasContext {
